@@ -1,13 +1,21 @@
-# 🚀 CoralCode - Editor de Código Profesional
+# 🚀 CoralCode - Editor de Código Rápido y Accesible
 
-Un **editor de código moderno y funcional** desarrollado en C++ con SFML, diseñado para ser **rápido, ligero y profesional**. Perfecto para desarrollo diario con syntax highlighting, múltiples temas y navegación avanzada.
+Un **editor de código libre y abierto** desarrollado en C++ con tecnologías de bajo nivel, diseñado para ser **extremadamente rápido y ligero**. Nuestra misión es crear un editor que funcione perfectamente en hardware más antiguo, permitiendo que personas con recursos limitados tengan acceso a herramientas de desarrollo modernas y eficientes.
 
-## ✨ **Características Principales**
+## 🎯 **Nuestra Misión**
 
-**🎯 Editor Profesional** con todas las funcionalidades modernas  
-**⚡ Rendimiento Optimizado** sin bloqueos ni lag  
-**🎨 Syntax Highlighting** para múltiples lenguajes  
-**🖥️ Interfaz Nativa** para macOS, Windows y Linux
+**Democratizar el desarrollo de software** proporcionando un editor que:
+- 🖥️ **Funciona en hardware antiguo** - Optimizado para computadoras de hace 5-10 años
+- ⚡ **Consume mínimos recursos** - Desarrollado con tecnologías de bajo nivel (C++ + SFML)
+- 🌍 **Es completamente gratuito** - Código abierto bajo licencia MIT
+- 🚀 **Mantiene alta velocidad** - Sin sacrificar funcionalidades por rendimiento
+
+## ✨ **Características Actuales**
+
+**🎯 Aspiramos a ser un editor profesional** con funcionalidades modernas  
+**⚡ Rendimiento Ultrarrápido** diseñado para hardware limitado  
+**🎨 Syntax Highlighting Eficiente** sin impacto en rendimiento  
+**🖥️ Multiplataforma** para macOS, Windows y Linux
 
 ## 🎯 Características
 
@@ -102,37 +110,66 @@ int main() {                    // 'int' y 'main' en azul
 - **Shift + Rueda**: Scroll horizontal
 - **Trackpad horizontal**: Scroll horizontal nativo (Mac)
 
-## 🔧 Arquitectura Moderna
+## 🔧 Arquitectura Modular
+
+CoralCode utiliza una **arquitectura modular moderna** que sigue las mejores prácticas de C++:
 
 ```
-coralcode.cpp
-├── std::vector<std::string> lines    // Almacenamiento eficiente
-├── size_t currentLine, currentCol    // Posición del cursor
-├── size_t scrollLine, scrollCol      // Posición del scroll
-├── isKeyword()                       // Detección de palabras reservadas
-├── processLine()                     // Análisis de syntax highlighting
-├── calculateVisibleLines()           // Cálculo de líneas visibles
-├── getSelectionBounds()              // Lógica de selección
-├── saveState() / undo() / redo()     // Sistema de historial
-├── getClipboard() / setClipboard()   // Integración con sistema
-└── SFML rendering                    // Visualización moderna
+src/
+├── core/                    # Lógica central
+│   ├── Editor.cpp          # Orquestador principal
+│   ├── TextBuffer.cpp      # Gestión de contenido
+│   └── Viewport.cpp        # Scroll y visualización
+├── ui/                     # Interfaz de usuario  
+│   ├── Window.cpp          # Gestión de ventana SFML
+│   ├── EventHandler.cpp    # Procesamiento de eventos
+│   └── Renderer.cpp        # Sistema de renderizado
+├── syntax/                 # Syntax highlighting
+│   ├── SyntaxHighlighter.cpp
+│   ├── LanguageDetector.cpp
+│   └── TokenParser.cpp
+├── utils/                  # Utilidades
+│   ├── ClipboardManager.cpp
+│   ├── UndoRedoManager.cpp
+│   ├── FileHandler.cpp
+│   └── ConfigManager.cpp
+└── main.cpp               # Punto de entrada
 ```
 
-**Arquitectura optimizada y robusta** con todas las funcionalidades modernas.
+### **📋 Principios de Diseño:**
+- **🔧 Separación de Responsabilidades** - Cada módulo tiene una función específica
+- **🔄 Bajo Acoplamiento** - Dependencias mínimas entre módulos  
+- **🧪 Alta Testabilidad** - Cada componente es testeable por separado
+- **🚀 Escalabilidad** - Fácil agregar nuevas funcionalidades
 
-## ✨ Ventajas del Sistema
+### **📊 Versiones Disponibles:**
+- **Modular** (`make`): Arquitectura profesional recomendada para desarrollo
+- **Legacy** (`make legacy`): Archivo único (`coralcode.cpp`) funcional pero no mantenible
 
-### 🟢 **Características Destacadas:**
-- ✅ **Rendimiento Optimizado** - Sin bloqueos ni lag
-- ✅ **Syntax Highlighting Profesional** - Múltiples lenguajes
-- ✅ **Navegación Avanzada** - Scroll rápido y preciso
-- ✅ **Interfaz Nativa** - Comportamiento nativo en cada plataforma
-- ✅ **Undo/Redo Robusto** - Historial de 100 cambios
-- ✅ **Copy/Paste del Sistema** - Integración completa
-- ✅ **Selección de Texto** - Click y arrastra intuitivo
-- ✅ **Ventana Redimensionable** - Sin distorsión de texto
-- ✅ **Cursos Contextuales** - UX profesional
-- ✅ **Barra de Estado Informativa** - Estadísticas en tiempo real
+Ver [ARCHITECTURE.md](ARCHITECTURE.md) para documentación detallada de la arquitectura.
+
+## ✨ **¿Por Qué CoralCode?**
+
+### 🌍 **Accesibilidad Universal:**
+- ✅ **Hardware Antiguo** - Funciona en computadoras de 4GB RAM o menos
+- ✅ **Arranque Ultrarrápido** - Inicia en menos de 1 segundo
+- ✅ **Uso Mínimo de Memoria** - Menos de 50MB en uso típico
+- ✅ **Sin Dependencias Pesadas** - Solo SFML como dependencia externa
+- ✅ **Instalación Ligera** - Ejecutable de menos de 5MB
+
+### 🚀 **Tecnología de Bajo Nivel:**
+- ✅ **C++ Nativo** - Máximo rendimiento sin abstracciones innecesarias
+- ✅ **SFML Optimizado** - Renderizado eficiente y multiplataforma
+- ✅ **Gestión Manual de Memoria** - Sin garbage collection que cause lag
+- ✅ **Algoritmos Eficientes** - Optimizado para O(1) en operaciones comunes
+- ✅ **Compilación Estática** - Sin DLLs externas en tiempo de ejecución
+
+### 💡 **Funcionalidades Inteligentes:**
+- ✅ **Syntax Highlighting Eficiente** - Sin impacto en rendimiento
+- ✅ **Navegación Fluida** - Scroll y cursor siempre responsivos  
+- ✅ **Undo/Redo Inteligente** - Sistema optimizado de historial
+- ✅ **Copy/Paste Nativo** - Integración completa con el sistema
+- ✅ **Selección Precisa** - Feedback visual inmediato
 
 ## 🚀 Próximas Funcionalidades
 
@@ -159,28 +196,102 @@ coralcode.cpp
 - [ ] Comentarios específicos (//, /* */, #, <!-- -->)
 - [ ] Strings específicos (", ', `, """)
 
-## 🤝 Contribuir
+## 🤝 **Únete a la Misión**
 
-¡Las contribuciones son bienvenidas! Si quieres contribuir:
+¡Ayúdanos a democratizar el desarrollo de software! Buscamos contribuidores que compartan nuestra visión de **tecnología accesible para todos**.
+
+### 🎯 **Tipos de Contribución Necesarias:**
+
+#### **🔧 Optimización de Rendimiento:**
+- Profiling y mejora de algoritmos existentes
+- Reducción del uso de memoria
+- Optimización de renderizado
+- Mejoras en tiempo de arranque
+
+#### **🌍 Accesibilidad:**
+- Soporte para hardware más antiguo
+- Reducción de dependencias
+- Mejoras en eficiencia energética
+- Optimización para SSDs lentos/HDDs
+
+#### **🚀 Nuevas Funcionalidades:**
+- Sistema de archivos eficiente
+- Múltiples pestañas sin overhead
+- Temas optimizados para diferentes hardwares
+- Búsqueda ultrarrápida
+
+#### **📚 Documentación:**
+- Benchmarks de rendimiento
+- Guías para hardware limitado
+- Tutoriales de optimización
+- Casos de uso en comunidades
+
+### 🛠️ **Cómo Contribuir:**
 
 1. **Fork** el repositorio
-2. **Crea** una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** a la rama (`git push origin feature/AmazingFeature`)
-5. **Abre** un Pull Request
+2. **Crea** una rama descriptiva (`git checkout -b optimize/text-rendering`)
+3. **Implementa** cambios con foco en eficiencia
+4. **Prueba** en hardware limitado si es posible
+5. **Documenta** mejoras de rendimiento
+6. **Abre** un Pull Request con métricas
+
+### 📊 **Criterios de Contribución:**
+
+- **Rendimiento primero:** Cualquier funcionalidad nueva debe mantener o mejorar el rendimiento
+- **Memoria eficiente:** Preferir stack sobre heap, evitar leaks
+- **Compatibilidad:** Debe funcionar en hardware de hace 5-10 años
+- **Simplicidad:** Código legible y mantenible
+- **Testing:** Incluir benchmarks cuando sea relevante
 
 ## 📜 Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
-## 🎯 Filosofía del Proyecto
+## 🎯 **Filosofía del Proyecto**
 
-> **"Simple, funcional, confiable"**
+> **"Tecnología accesible para todos"**
 
-CoralCode demuestra que **no necesitas arquitecturas complejas** para crear software funcional. A veces, **la simplicidad es la sofisticación suprema**.
+### 🌍 **Democratizando el Desarrollo**
+
+Creemos que **todas las personas** deberían tener acceso a herramientas de desarrollo eficientes, independientemente de sus recursos económicos o la antigüedad de su hardware.
+
+### ⚡ **Eficiencia Sobre Lujo**
+
+Mientras otros editores agregan funcionalidades que consumen más recursos, nosotros nos enfocamos en:
+- **Optimización constante** del código existente
+- **Algoritmos eficientes** sobre interfaces bonitas pero lentas  
+- **Funcionalidad esencial** sin bloatware innecesario
+- **Rendimiento consistente** en cualquier hardware
+
+### 🛠️ **Tecnología con Propósito**
+
+**C++ y SFML** no son solo tecnologías "cool" - son las herramientas correctas para:
+- **Máximo control** sobre recursos del sistema
+- **Predictibilidad** en el rendimiento
+- **Longevidad** del software (sin frameworks que se vuelvan obsoletos)
+- **Portabilidad** real entre plataformas
+
+### 💚 **Impacto Social**
+
+Un editor rápido y eficiente puede:
+- **Extender la vida útil** de computadoras antiguas
+- **Reducir la brecha digital** permitiendo desarrollo en hardware limitado
+- **Fomentar el aprendizaje** con herramientas que no frustren por lentitud
+- **Democratizar la programación** para comunidades con recursos limitados
 
 ---
 
-## ⭐ ¡Dale una estrella si te gusta!
+## ⭐ **¡Ayúdanos a Crecer!**
 
-Si este editor te resulta útil, ¡considera darle una estrella en GitHub!
+Si crees en nuestra misión de **democratizar el desarrollo de software** y crear tecnología accesible para todos:
+
+- 🌟 **Dale una estrella** para aumentar la visibilidad del proyecto
+- 🔄 **Comparte** con desarrolladores que tengan hardware limitado
+- 💬 **Cuéntanos** tu experiencia usando CoralCode en hardware antiguo
+- 🤝 **Contribuye** con optimizaciones o nuevas funcionalidades eficientes
+
+### 📢 **Mensaje para la Comunidad:**
+
+> *"Cada línea de código optimizada puede extender la vida útil de miles de computadoras y permitir que más personas accedan al mundo de la programación. Juntos podemos hacer la diferencia."*
+
+**CoralCode: Código abierto, rápido y accesible para todos. 🚀**
