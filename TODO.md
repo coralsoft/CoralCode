@@ -2,38 +2,48 @@
 
 ## 🎯 **Próximas Mejoras Prioritarias**
 
-### **📜 1. Barra de Scroll Visual**
-- **Descripción**: Agregar una barra de scroll tradicional en el lado derecho
-- **Funcionalidad**: 
-  - Mostrar posición actual en el documento
-  - Permitir click y drag para navegar rápidamente
-  - Indicador visual del porcentaje de scroll
-- **Beneficio**: Navegación más intuitiva en documentos largos
+### **📁 1. Sistema de Archivos**
+- [ ] **Abrir archivos** (.cpp, .h, .py, .js, .java, .html, .json, etc.)
+- [ ] **Guardar archivos** (Ctrl/Cmd+S)
+- [ ] **Guardar como** (Ctrl/Cmd+Shift+S)
+- [ ] **Nuevo archivo** (Ctrl/Cmd+N)
+- [ ] **Detectar cambios no guardados** (indicador en título)
+- [ ] **Confirmar antes de cerrar** si hay cambios
 
-### **🔄 2. Sistema Undo/Redo (Cmd+Z)**
-- **Descripción**: Implementar sistema de deshacer/rehacer cambios
-- **Funcionalidad**:
-  - **Cmd+Z**: Deshacer último cambio
-  - **Cmd+Shift+Z**: Rehacer cambio deshecho
-  - Historial de cambios (insertar, borrar, reemplazar)
-  - Límite de historial (ej: últimos 100 cambios)
-- **Beneficio**: Seguridad al editar y recuperación de errores
+### **📑 2. Múltiples Pestañas**
+- [ ] **Sistema de pestañas** para múltiples archivos
+- [ ] **Cambiar entre pestañas** (Ctrl/Cmd+Tab, Ctrl/Cmd+Shift+Tab)
+- [ ] **Cerrar pestañas** (Ctrl/Cmd+W)
+- [ ] **Reordenar pestañas** con drag & drop
+- [ ] **Pestañas con scroll horizontal** si hay muchas
+- [ ] **Indicador de archivo modificado** en pestaña
 
-### **🖼️ 3. Texto Sin Distorsión al Redimensionar**
-- **Descripción**: Mantener tamaño de texto constante al cambiar ventana
-- **Problema actual**: El texto se estira como imagen
-- **Solución**: 
-  - Mantener fuente en tamaño fijo (16px)
-  - Solo cambiar cantidad de líneas/columnas visibles
-  - Recalcular layout sin afectar renderizado de texto
-- **Beneficio**: Experiencia visual consistente
+### **🎨 3. Múltiples Temas**
+- [ ] **Tema Dark** (actual)
+- [ ] **Tema Light** (fondo blanco, texto negro)
+- [ ] **Tema Blue** (azul oscuro, texto claro)
+- [ ] **Tema Green** (verde oscuro, terminal style)
+- [ ] **Selector de temas** (Ctrl/Cmd+T)
+- [ ] **Persistencia de tema** entre sesiones
+- [ ] **Colores personalizables** por tema
 
-## 🔧 **Mejoras Técnicas Adicionales**
-
-### **📏 4. Barra de Scroll Avanzada**
-- Thumb (indicador) proporcional al contenido
-- Click en área vacía para salto rápido
-- Scroll suave con animación
+### **🌐 4. Módulo de Lenguajes**
+- [ ] **Detectar lenguaje** por extensión de archivo
+- [ ] **Keywords específicas** por lenguaje
+- [ ] **Comentarios específicos** (//, /* */, #, <!-- -->)
+- [ ] **Strings específicos** (", ', `, """)
+- [ ] **Soporte completo** para:
+  - [ ] C/C++ (.c, .cpp, .h, .hpp)
+  - [ ] Python (.py, .pyw)
+  - [ ] JavaScript (.js, .jsx, .ts, .tsx)
+  - [ ] Java (.java)
+  - [ ] C# (.cs)
+  - [ ] HTML (.html, .htm)
+  - [ ] CSS (.css)
+  - [ ] JSON (.json)
+  - [ ] XML (.xml)
+  - [ ] Markdown (.md)
+  - [ ] Shell (.sh, .bash)
 
 ### **💾 5. Historial de Cambios Robusto**
 - Guardar estado antes de cada modificación
@@ -53,45 +63,18 @@
 - Números de línea automáticos
 - Selección de texto con mouse
 - Copy/paste con clipboard del sistema (Cmd+C/V)
-- Scroll vertical con rueda del mouse
-- Ventana redimensionable
+- Scroll vertical y horizontal con rueda del mouse
+- Ventana redimensionable sin distorsión de texto
 - Barra de estado informativa
-- Shortcuts nativos de Mac
-
-### 🔄 **En Desarrollo:**
-- Ninguna (sesión pausada)
-
-### ⏳ **Pendientes (Próxima Sesión):**
-- Barra de scroll visual
-- Sistema Undo/Redo
-- Corrección de distorsión de texto
-
-## 🎯 **Objetivos de la Próxima Sesión**
-
-1. **Prioridad 1**: Implementar barra de scroll visual
-2. **Prioridad 2**: Agregar Cmd+Z (undo) básico
-3. **Prioridad 3**: Corregir distorsión de texto al redimensionar
-
-## 📝 **Notas Técnicas**
-
-### **Para Barra de Scroll:**
-- Posición: Lado derecho de la ventana
-- Ancho: ~15px
-- Color: Gris oscuro con thumb más claro
-- Interacción: Click, drag, y wheel
-
-### **Para Undo/Redo:**
-- Estructura: `std::vector<EditorState>`
-- Estado incluye: `lines`, `cursorLine`, `cursorCol`
-- Máximo: 100 estados en historial
-- Teclas: Cmd+Z (undo), Cmd+Shift+Z (redo)
-
-### **Para Texto Sin Distorsión:**
-- Problema: SFML escala todo el contenido
-- Solución: Recalcular posiciones en píxeles absolutos
-- Mantener: fontSize constante, solo cambiar layout
-
----
+- Shortcuts nativos de Mac (Cmd+C/V/Z)
+- **Sistema de Undo/Redo** (Cmd+Z, Cmd+Shift+Z)
+- **Scroll rápido con modificadores** (Ctrl/Cmd+Flechas)
+- **Navegación rápida** (Ctrl/Cmd+←→ para inicio/fin de línea)
+- **Scroll de 10 líneas** (Ctrl/Cmd+↑↓)
+- **Barras de scroll visuales** (vertical y horizontal)
+- **Cursos contextuales** (texto, mano, flecha)
+- **Layout estable** en ventanas pequeñas
+- **Scroll invertido para Mac** (comportamiento nativo)
 
 ## 🚀 **¡Editor Funcional Completado!**
 
@@ -99,7 +82,10 @@ El editor actual ya es completamente funcional para uso diario:
 - ✅ Escribir código sin problemas
 - ✅ Syntax highlighting profesional  
 - ✅ Copy/paste con sistema
-- ✅ Scroll y navegación fluida
-- ✅ Ventana redimensionable
+- ✅ Scroll y navegación fluida (vertical y horizontal)
+- ✅ Ventana redimensionable sin distorsión
+- ✅ Undo/Redo robusto
+- ✅ Navegación rápida con modificadores
+- ✅ Interfaz nativa de Mac
 
-**Las mejoras de arriba son para hacerlo aún más profesional y user-friendly.**
+**Las mejoras de arriba son para transformarlo en un editor profesional completo con múltiples archivos y temas.**

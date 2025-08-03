@@ -1,35 +1,42 @@
-# CoralCode - Editor de Código C++ 🚀
+# 🚀 CoralCode - Editor de Código Profesional
 
-Un editor de código **súper simple y funcional** desarrollado en C++, basado en el `simple_editor` que funciona perfecto, ahora con **syntax highlighting** de múltiples lenguajes.
+Un **editor de código moderno y funcional** desarrollado en C++ con SFML, diseñado para ser **rápido, ligero y profesional**. Perfecto para desarrollo diario con syntax highlighting, múltiples temas y navegación avanzada.
 
-## ✨ **NUEVO - Editor Simplificado**
+## ✨ **Características Principales**
 
-**❌ Eliminé el sistema complejo** que causaba problemas  
-**✅ Editor basado en `simple_editor`** que funciona perfecto  
-**🎨 Syntax highlighting** para palabras reservadas  
-**⚡ Sin bloqueos** con `=`, `/`, o cualquier carácter
+**🎯 Editor Profesional** con todas las funcionalidades modernas  
+**⚡ Rendimiento Optimizado** sin bloqueos ni lag  
+**🎨 Syntax Highlighting** para múltiples lenguajes  
+**🖥️ Interfaz Nativa** para macOS, Windows y Linux
 
 ## 🎯 Características
 
 ### ✅ **Funciones Implementadas:**
-- **Edición de texto fluida** - basada en `std::vector<std::string>`
-- **Syntax highlighting** para palabras reservadas
-- **Soporte para múltiples lenguajes:**
-  - **C++**: `int`, `for`, `if`, `class`, `return`, `virtual`, etc.
-  - **C**: `printf`, `scanf`, `malloc`, `sizeof`, etc.
-  - **Java**: `package`, `extends`, `interface`, `final`, etc.
-  - **JavaScript**: `var`, `let`, `function`, `typeof`, etc.
-  - **Python**: `def`, `import`, `from`, `lambda`, etc.
-  - **C#**: `readonly`, `override`, `sealed`, etc.
-- **Colores optimizados:**
-  - 🔵 **Azul** para palabras reservadas
-  - 🟢 **Verde** para comentarios `//`
-  - 🟠 **Naranja** para strings `"text"`
-  - ⚪ **Blanco** para texto normal
-- **Indicador visual de línea actual** (barra roja)
-- **Cursor amarillo** siempre visible
-- **Navegación completa:** flechas, Enter, Backspace
-- **Fuente del sistema** (Monaco, Menlo, etc.)
+- **🎨 Syntax Highlighting Profesional** para múltiples lenguajes
+- **📊 Números de Línea Automáticos** con indicador visual
+- **🖱️ Selección de Texto** con mouse (click y arrastra)
+- **📋 Copy/Paste del Sistema** (Cmd+C/V en Mac, Ctrl+C/V en Windows/Linux)
+- **↶ Undo/Redo Robusto** (Cmd+Z, Cmd+Shift+Z) con límite de 100 cambios
+- **🔄 Scroll Avanzado** vertical y horizontal con rueda del mouse
+- **⚡ Navegación Rápida** con modificadores (Ctrl/Cmd+Flechas)
+- **📱 Ventana Redimensionable** sin distorsión de texto
+- **🎯 Cursos Contextuales** (texto, mano, flecha)
+- **📊 Barra de Estado Informativa** con estadísticas en tiempo real
+
+### 🌐 **Lenguajes Soportados:**
+- **C/C++**: `int`, `for`, `if`, `class`, `return`, `virtual`, etc.
+- **Java**: `package`, `extends`, `interface`, `final`, etc.
+- **JavaScript**: `var`, `let`, `function`, `typeof`, etc.
+- **Python**: `def`, `import`, `from`, `lambda`, etc.
+- **C#**: `readonly`, `override`, `sealed`, etc.
+- **HTML**: `div`, `span`, `class`, `id`, etc.
+- **JSON**: `true`, `false`, `null`, etc.
+
+### 🎨 **Colores Optimizados:**
+- 🔵 **Azul** para palabras reservadas
+- 🟢 **Verde** para comentarios `//` y `/* */`
+- 🟠 **Naranja** para strings `"text"` y `'text'`
+- ⚪ **Blanco** para texto normal
 
 ## 🚀 Cómo Usar
 
@@ -68,80 +75,112 @@ int main() {                    // 'int' y 'main' en azul
 
 ## ⌨️ Controles
 
-- **Escribir**: Cualquier carácter ASCII (a-z, 0-9, =, /, etc.)
+### **📝 Edición Básica:**
+- **Escribir**: Cualquier carácter ASCII
 - **Enter**: Nueva línea
 - **Backspace**: Borrar carácter/fusionar líneas
+- **Delete**: Borrar carácter siguiente
 - **Flechas**: Navegar por el texto
 - **ESC**: Salir del editor
 
-## 🔧 Arquitectura Simple
+### **⚡ Navegación Avanzada:**
+- **Ctrl/Cmd + ↑/↓**: Scroll rápido de 10 líneas
+- **Ctrl/Cmd + ←/→**: Ir al inicio/fin de línea
+- **PageUp/PageDown**: Scroll de página completa
+- **Home/End**: Inicio/fin de línea
+
+### **📋 Copy/Paste:**
+- **Cmd+C** (Mac) / **Ctrl+C** (Windows/Linux): Copiar selección
+- **Cmd+V** (Mac) / **Ctrl+V** (Windows/Linux): Pegar del clipboard
+- **Cmd+Z** (Mac) / **Ctrl+Z** (Windows/Linux): Deshacer
+- **Cmd+Shift+Z** (Mac) / **Ctrl+Y** (Windows/Linux): Rehacer
+
+### **🖱️ Mouse:**
+- **Click**: Posicionar cursor
+- **Click + Arrastra**: Seleccionar texto
+- **Rueda del mouse**: Scroll vertical
+- **Shift + Rueda**: Scroll horizontal
+- **Trackpad horizontal**: Scroll horizontal nativo (Mac)
+
+## 🔧 Arquitectura Moderna
 
 ```
 coralcode.cpp
-├── std::vector<std::string> lines    // Almacenamiento simple
+├── std::vector<std::string> lines    // Almacenamiento eficiente
 ├── size_t currentLine, currentCol    // Posición del cursor
+├── size_t scrollLine, scrollCol      // Posición del scroll
 ├── isKeyword()                       // Detección de palabras reservadas
 ├── processLine()                     // Análisis de syntax highlighting
-└── SFML rendering                    // Visualización
+├── calculateVisibleLines()           // Cálculo de líneas visibles
+├── getSelectionBounds()              // Lógica de selección
+├── saveState() / undo() / redo()     // Sistema de historial
+├── getClipboard() / setClipboard()   // Integración con sistema
+└── SFML rendering                    // Visualización moderna
 ```
 
-**Sin sistemas complejos, sin TextBuffer, sin clases pesadas.**  
-**Solo lógica directa que FUNCIONA.**
+**Arquitectura optimizada y robusta** con todas las funcionalidades modernas.
 
-## ✨ Ventajas del Nuevo Sistema
+## ✨ Ventajas del Sistema
 
-### 🟢 **Lo que FUNCIONA:**
-- ✅ **Todos los caracteres** (`=`, `/`, `@`, `#`, etc.)
-- ✅ **Sin bloqueos** al escribir
-- ✅ **Cursor siempre sincronizado**
-- ✅ **Rendimiento fluido**
-- ✅ **Syntax highlighting funcional**
-- ✅ **Interfaz clara y limpia**
+### 🟢 **Características Destacadas:**
+- ✅ **Rendimiento Optimizado** - Sin bloqueos ni lag
+- ✅ **Syntax Highlighting Profesional** - Múltiples lenguajes
+- ✅ **Navegación Avanzada** - Scroll rápido y preciso
+- ✅ **Interfaz Nativa** - Comportamiento nativo en cada plataforma
+- ✅ **Undo/Redo Robusto** - Historial de 100 cambios
+- ✅ **Copy/Paste del Sistema** - Integración completa
+- ✅ **Selección de Texto** - Click y arrastra intuitivo
+- ✅ **Ventana Redimensionable** - Sin distorsión de texto
+- ✅ **Cursos Contextuales** - UX profesional
+- ✅ **Barra de Estado Informativa** - Estadísticas en tiempo real
 
-### 🔴 **Lo que ELIMINÉ:**
-- ❌ Sistema complejo de TextBuffer
-- ❌ Clases pesadas de SyntaxHighlighter
-- ❌ Arquitectura multi-archivo problemática
-- ❌ Actualizaciones forzadas que causaban lag
-- ❌ Parsing complejo de tokens
+## 🚀 Próximas Funcionalidades
 
-## 📊 Comparación
+### **📁 Sistema de Archivos:**
+- [ ] Abrir archivos (.cpp, .h, .py, .js, .java, .html, .json, etc.)
+- [ ] Guardar archivos (Ctrl/Cmd+S)
+- [ ] Guardar como (Ctrl/Cmd+Shift+S)
+- [ ] Nuevo archivo (Ctrl/Cmd+N)
 
-| Aspecto | Editor Complejo (Anterior) | Editor Simple (Nuevo) |
-|---------|----------------------------|----------------------|
-| **Funcionalidad** | ❌ Bloqueos con `=` y `/` | ✅ Todos los caracteres |
-| **Rendimiento** | 🐌 Lento, lag | ⚡ Fluido, responsive |
-| **Syntax Highlighting** | 🔴 Bugueado | 🎨 Funcional |
-| **Compilación** | 😵 CMake complejo | 😊 Una línea |
-| **Mantenibilidad** | 📚 Múltiples archivos | 📄 Un archivo |
-| **Confiabilidad** | ❓ Inestable | ✅ Sólido |
+### **📑 Múltiples Pestañas:**
+- [ ] Sistema de pestañas para múltiples archivos
+- [ ] Cambiar entre pestañas (Ctrl/Cmd+Tab)
+- [ ] Cerrar pestañas (Ctrl/Cmd+W)
+
+### **🎨 Múltiples Temas:**
+- [ ] Tema Light (fondo blanco, texto negro)
+- [ ] Tema Blue (azul oscuro, texto claro)
+- [ ] Tema Green (verde oscuro, terminal style)
+- [ ] Selector de temas (Ctrl/Cmd+T)
+
+### **🌐 Módulo de Lenguajes:**
+- [ ] Detectar lenguaje por extensión de archivo
+- [ ] Keywords específicas por lenguaje
+- [ ] Comentarios específicos (//, /* */, #, <!-- -->)
+- [ ] Strings específicos (", ', `, """)
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Si quieres contribuir:
+
+1. **Fork** el repositorio
+2. **Crea** una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. **Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** a la rama (`git push origin feature/AmazingFeature`)
+5. **Abre** un Pull Request
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
 ## 🎯 Filosofía del Proyecto
 
 > **"Simple, funcional, confiable"**
 
-Este editor demuestra que **no necesitas arquitecturas complejas** para crear software funcional. A veces, **la simplicidad es la sofisticación suprema**.
-
-**El `simple_editor` funcionaba perfecto → Agregué syntax highlighting → Ahora `coralcode` funciona perfecto.**
-
-## 🚀 Próximos Pasos (Opcionales)
-
-Si quieres extender el editor manteniendo la simplicidad:
-
-- **Guardar/Abrir archivos** - agregar funciones simples
-- **Búsqueda de texto** - con Ctrl+F
-- **Múltiples pestañas** - array de `std::vector<std::string>`
-- **Más colores** - extender `processLine()`
-- **Autocompletado básico** - suggestions simples
-
-Pero recuerda: **mantenlo simple.**
+CoralCode demuestra que **no necesitas arquitecturas complejas** para crear software funcional. A veces, **la simplicidad es la sofisticación suprema**.
 
 ---
 
-## 📜 Licencia
+## ⭐ ¡Dale una estrella si te gusta!
 
-MIT License - Úsalo libremente.
-
-## 🎉 ¡Disfruta tu editor que FUNCIONA!
-
-**No más bloqueos, no más problemas. Solo un editor simple y funcional con syntax highlighting.**
+Si este editor te resulta útil, ¡considera darle una estrella en GitHub!
