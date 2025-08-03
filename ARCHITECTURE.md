@@ -15,24 +15,24 @@ Este documento describe la arquitectura modular de CoralCode, diseñada siguiend
 
 ## 🎯 Filosofía de Diseño
 
-### **Principios Fundamentales:**
+### Principios Fundamentales
 
-1. **🔧 Separación de Responsabilidades** - Cada módulo tiene una responsabilidad específica y bien definida
-2. **🔄 Bajo Acoplamiento** - Los módulos dependen de abstracciones, no de implementaciones
-3. **🎯 Alta Cohesión** - Los elementos dentro de cada módulo trabajan juntos hacia un objetivo común
+1. **🔧 Separación de Responsabilidades** - Cada módulo tiene una responsabilidad específica
+2. **🔄 Bajo Acoplamiento** - Los módulos dependen de abstracciones, no implementaciones
+3. **🎯 Alta Cohesión** - Los elementos trabajan juntos hacia un objetivo común
 4. **🧪 Testabilidad** - Cada componente puede ser probado de forma aislada
-5. **🚀 Escalabilidad** - Fácil agregar nuevas funcionalidades sin modificar código existente
+5. **🚀 Escalabilidad** - Fácil agregar nuevas funcionalidades
 
-### **Ventajas vs Archivo Único:**
+### Ventajas vs Archivo Único
 
-| Aspecto | Archivo Único (Legacy) | Arquitectura Modular |
-|---------|------------------------|---------------------|
-| **Mantenimiento** | ❌ Difícil de modificar | ✅ Cambios localizados |
-| **Testing** | ❌ Testing de integración únicamente | ✅ Unit tests por módulo |
-| **Colaboración** | ❌ Conflictos de merge frecuentes | ✅ Trabajo paralelo sin conflictos |
-| **Reutilización** | ❌ Copiar y pegar código | ✅ Módulos reutilizables |
-| **Debugging** | ❌ Difícil localizar problemas | ✅ Aislamiento de errores |
-| **Escalabilidad** | ❌ Crece exponencialmente | ✅ Crecimiento lineal |
+| Aspecto | Archivo Único | Arquitectura Modular |
+|---------|---------------|---------------------|
+| **Mantenimiento** | ❌ Difícil | ✅ Cambios localizados |
+| **Testing** | ❌ Solo integración | ✅ Unit tests por módulo |
+| **Colaboración** | ❌ Conflictos frecuentes | ✅ Trabajo paralelo |
+| **Reutilización** | ❌ Copy-paste | ✅ Módulos reutilizables |
+| **Debugging** | ❌ Difícil localizar | ✅ Aislamiento de errores |
+| **Escalabilidad** | ❌ Crecimiento exponencial | ✅ Crecimiento lineal |
 
 ## 📁 Estructura del Proyecto
 

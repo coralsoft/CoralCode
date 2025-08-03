@@ -1,50 +1,37 @@
 # 🚀 CoralCode - Editor de Código Rápido y Accesible
 
-Un **editor de código libre y abierto** desarrollado en C++ con tecnologías de bajo nivel, diseñado para ser **extremadamente rápido y ligero**. Nuestra misión es crear un editor que funcione perfectamente en hardware más antiguo, permitiendo que personas con recursos limitados tengan acceso a herramientas de desarrollo modernas y eficientes.
+Editor de código **libre y abierto** desarrollado en C++ con tecnologías de bajo nivel. Nuestra misión es crear un editor que funcione perfectamente en hardware antiguo, permitiendo que personas con recursos limitados tengan acceso a herramientas de desarrollo modernas.
 
-## 🎯 **Nuestra Misión**
+## 🎯 Misión
 
-**Democratizar el desarrollo de software** proporcionando un editor que:
-- 🖥️ **Funciona en hardware antiguo** - Optimizado para computadoras de hace 5-10 años
-- ⚡ **Consume mínimos recursos** - Desarrollado con tecnologías de bajo nivel (C++ + SFML)
-- 🌍 **Es completamente gratuito** - Código abierto bajo licencia MIT
-- 🚀 **Mantiene alta velocidad** - Sin sacrificar funcionalidades por rendimiento
-
-## ✨ **Características Actuales**
-
-**🎯 Aspiramos a ser un editor profesional** con funcionalidades modernas  
-**⚡ Rendimiento Ultrarrápido** diseñado para hardware limitado  
-**🎨 Syntax Highlighting Eficiente** sin impacto en rendimiento  
-**🖥️ Multiplataforma** para macOS, Windows y Linux
+**Democratizar el desarrollo de software** con un editor que:
+- 🖥️ **Funciona en hardware antiguo** (5-10 años)
+- ⚡ **Consume mínimos recursos** (C++ + SFML)
+- 🌍 **Completamente gratuito** (MIT license)
+- 🚀 **Mantiene alta velocidad** sin sacrificar funcionalidades
 
 ## 🎯 Características
 
-### ✅ **Funciones Implementadas:**
-- **🎨 Syntax Highlighting Profesional** para múltiples lenguajes
-- **📊 Números de Línea Automáticos** con indicador visual
-- **🖱️ Selección de Texto** con mouse (click y arrastra)
-- **📋 Copy/Paste del Sistema** (Cmd+C/V en Mac, Ctrl+C/V en Windows/Linux)
-- **↶ Undo/Redo Robusto** (Cmd+Z, Cmd+Shift+Z) con límite de 100 cambios
-- **🔄 Scroll Avanzado** vertical y horizontal con rueda del mouse
-- **⚡ Navegación Rápida** con modificadores (Ctrl/Cmd+Flechas)
-- **📱 Ventana Redimensionable** sin distorsión de texto
-- **🎯 Cursos Contextuales** (texto, mano, flecha)
-- **📊 Barra de Estado Informativa** con estadísticas en tiempo real
+### ✅ Funciones Implementadas
+- **🎨 Syntax Highlighting** para múltiples lenguajes
+- **📊 Números de línea** automáticos
+- **🖱️ Selección de texto** con mouse
+- **📋 Copy/Paste del sistema** (Cmd+C/V, Ctrl+C/V)
+- **↶ Undo/Redo** robusto (Cmd+Z, Cmd+Shift+Z)
+- **🔄 Scroll avanzado** vertical y horizontal
+- **⚡ Navegación rápida** con modificadores
+- **📱 Ventana redimensionable** sin distorsión
+- **🎯 Cursos contextuales** (texto, mano, flecha)
+- **📊 Barra de estado** informativa
 
-### 🌐 **Lenguajes Soportados:**
-- **C/C++**: `int`, `for`, `if`, `class`, `return`, `virtual`, etc.
-- **Java**: `package`, `extends`, `interface`, `final`, etc.
-- **JavaScript**: `var`, `let`, `function`, `typeof`, etc.
-- **Python**: `def`, `import`, `from`, `lambda`, etc.
-- **C#**: `readonly`, `override`, `sealed`, etc.
-- **HTML**: `div`, `span`, `class`, `id`, etc.
-- **JSON**: `true`, `false`, `null`, etc.
+### 🌐 Lenguajes Soportados
+- **C/C++**, **Java**, **JavaScript**, **Python**, **C#**, **HTML**, **JSON**
 
-### 🎨 **Colores Optimizados:**
-- 🔵 **Azul** para palabras reservadas
-- 🟢 **Verde** para comentarios `//` y `/* */`
-- 🟠 **Naranja** para strings `"text"` y `'text'`
-- ⚪ **Blanco** para texto normal
+### 🎨 Colores
+- 🔵 **Azul** palabras reservadas
+- 🟢 **Verde** comentarios
+- 🟠 **Naranja** strings
+- ⚪ **Blanco** texto normal
 
 ## 🚀 Cómo Usar
 
@@ -148,28 +135,21 @@ src/
 
 Ver [ARCHITECTURE.md](ARCHITECTURE.md) para documentación detallada de la arquitectura.
 
-## ✨ **¿Por Qué CoralCode?**
+## ✨ ¿Por Qué CoralCode?
 
-### 🌍 **Accesibilidad Universal:**
-- ✅ **Hardware Antiguo** - Funciona en computadoras de 4GB RAM o menos
-- ✅ **Arranque Ultrarrápido** - Inicia en menos de 1 segundo
-- ✅ **Uso Mínimo de Memoria** - Menos de 50MB en uso típico
-- ✅ **Sin Dependencias Pesadas** - Solo SFML como dependencia externa
-- ✅ **Instalación Ligera** - Ejecutable de menos de 5MB
+### 🌍 Accesibilidad Universal
+- ✅ **Hardware antiguo** - 4GB RAM o menos
+- ✅ **Arranque ultrarrápido** - <1 segundo
+- ✅ **Uso mínimo de memoria** - <50MB
+- ✅ **Sin dependencias pesadas** - Solo SFML
+- ✅ **Instalación ligera** - <5MB ejecutable
 
-### 🚀 **Tecnología de Bajo Nivel:**
-- ✅ **C++ Nativo** - Máximo rendimiento sin abstracciones innecesarias
-- ✅ **SFML Optimizado** - Renderizado eficiente y multiplataforma
-- ✅ **Gestión Manual de Memoria** - Sin garbage collection que cause lag
-- ✅ **Algoritmos Eficientes** - Optimizado para O(1) en operaciones comunes
-- ✅ **Compilación Estática** - Sin DLLs externas en tiempo de ejecución
-
-### 💡 **Funcionalidades Inteligentes:**
-- ✅ **Syntax Highlighting Eficiente** - Sin impacto en rendimiento
-- ✅ **Navegación Fluida** - Scroll y cursor siempre responsivos  
-- ✅ **Undo/Redo Inteligente** - Sistema optimizado de historial
-- ✅ **Copy/Paste Nativo** - Integración completa con el sistema
-- ✅ **Selección Precisa** - Feedback visual inmediato
+### 🚀 Tecnología de Bajo Nivel
+- ✅ **C++ nativo** - Máximo rendimiento
+- ✅ **SFML optimizado** - Renderizado eficiente
+- ✅ **Gestión manual de memoria** - Sin garbage collection
+- ✅ **Algoritmos eficientes** - O(1) en operaciones comunes
+- ✅ **Compilación estática** - Sin DLLs externas
 
 ## 🚀 Próximas Funcionalidades
 
@@ -196,37 +176,31 @@ Ver [ARCHITECTURE.md](ARCHITECTURE.md) para documentación detallada de la arqui
 - [ ] Comentarios específicos (//, /* */, #, <!-- -->)
 - [ ] Strings específicos (", ', `, """)
 
-## 🤝 **Únete a la Misión**
+## 🤝 Únete a la Misión
 
 ¡Ayúdanos a democratizar el desarrollo de software! Buscamos contribuidores que compartan nuestra visión de **tecnología accesible para todos**.
 
-### 🎯 **Tipos de Contribución Necesarias:**
+### 🎯 Tipos de Contribución
 
-#### **🔧 Optimización de Rendimiento:**
-- Profiling y mejora de algoritmos existentes
-- Reducción del uso de memoria
+#### 🔧 Optimización de Rendimiento
+- Profiling y mejora de algoritmos
+- Reducción de uso de memoria
 - Optimización de renderizado
 - Mejoras en tiempo de arranque
 
-#### **🌍 Accesibilidad:**
+#### 🌍 Accesibilidad
 - Soporte para hardware más antiguo
 - Reducción de dependencias
 - Mejoras en eficiencia energética
 - Optimización para SSDs lentos/HDDs
 
-#### **🚀 Nuevas Funcionalidades:**
+#### 🚀 Nuevas Funcionalidades
 - Sistema de archivos eficiente
 - Múltiples pestañas sin overhead
 - Temas optimizados para diferentes hardwares
 - Búsqueda ultrarrápida
 
-#### **📚 Documentación:**
-- Benchmarks de rendimiento
-- Guías para hardware limitado
-- Tutoriales de optimización
-- Casos de uso en comunidades
-
-### 🛠️ **Cómo Contribuir:**
+### 🛠️ Cómo Contribuir
 
 1. **Fork** el repositorio
 2. **Crea** una rama descriptiva (`git checkout -b optimize/text-rendering`)
@@ -235,7 +209,7 @@ Ver [ARCHITECTURE.md](ARCHITECTURE.md) para documentación detallada de la arqui
 5. **Documenta** mejoras de rendimiento
 6. **Abre** un Pull Request con métricas
 
-### 📊 **Criterios de Contribución:**
+### 📊 Criterios de Contribución
 
 - **Rendimiento primero:** Cualquier funcionalidad nueva debe mantener o mejorar el rendimiento
 - **Memoria eficiente:** Preferir stack sobre heap, evitar leaks
@@ -247,15 +221,15 @@ Ver [ARCHITECTURE.md](ARCHITECTURE.md) para documentación detallada de la arqui
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
-## 🎯 **Filosofía del Proyecto**
+## 🎯 Filosofía del Proyecto
 
 > **"Tecnología accesible para todos"**
 
-### 🌍 **Democratizando el Desarrollo**
+### 🌍 Democratizando el Desarrollo
 
 Creemos que **todas las personas** deberían tener acceso a herramientas de desarrollo eficientes, independientemente de sus recursos económicos o la antigüedad de su hardware.
 
-### ⚡ **Eficiencia Sobre Lujo**
+### ⚡ Eficiencia Sobre Lujo
 
 Mientras otros editores agregan funcionalidades que consumen más recursos, nosotros nos enfocamos en:
 - **Optimización constante** del código existente
@@ -263,7 +237,7 @@ Mientras otros editores agregan funcionalidades que consumen más recursos, noso
 - **Funcionalidad esencial** sin bloatware innecesario
 - **Rendimiento consistente** en cualquier hardware
 
-### 🛠️ **Tecnología con Propósito**
+### 🛠️ Tecnología con Propósito
 
 **C++ y SFML** no son solo tecnologías "cool" - son las herramientas correctas para:
 - **Máximo control** sobre recursos del sistema
@@ -271,7 +245,7 @@ Mientras otros editores agregan funcionalidades que consumen más recursos, noso
 - **Longevidad** del software (sin frameworks que se vuelvan obsoletos)
 - **Portabilidad** real entre plataformas
 
-### 💚 **Impacto Social**
+### 💚 Impacto Social
 
 Un editor rápido y eficiente puede:
 - **Extender la vida útil** de computadoras antiguas
@@ -281,16 +255,16 @@ Un editor rápido y eficiente puede:
 
 ---
 
-## ⭐ **¡Ayúdanos a Crecer!**
+## ⭐ ¡Ayúdanos a Crecer!
 
-Si crees en nuestra misión de **democratizar el desarrollo de software** y crear tecnología accesible para todos:
+Si crees en nuestra misión de **democratizar el desarrollo de software**:
 
-- 🌟 **Dale una estrella** para aumentar la visibilidad del proyecto
+- 🌟 **Dale una estrella** para aumentar la visibilidad
 - 🔄 **Comparte** con desarrolladores que tengan hardware limitado
 - 💬 **Cuéntanos** tu experiencia usando CoralCode en hardware antiguo
-- 🤝 **Contribuye** con optimizaciones o nuevas funcionalidades eficientes
+- 🤝 **Contribuye** con optimizaciones o nuevas funcionalidades
 
-### 📢 **Mensaje para la Comunidad:**
+### 📢 Mensaje para la Comunidad
 
 > *"Cada línea de código optimizada puede extender la vida útil de miles de computadoras y permitir que más personas accedan al mundo de la programación. Juntos podemos hacer la diferencia."*
 
